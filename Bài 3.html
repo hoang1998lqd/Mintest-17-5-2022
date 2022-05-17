@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<p id="Tong"></p>
+</body>
+<script>
+    //
+    let array =[4,6,7,3,8,96,17, 19, 23,25,47];
+    let sum = 0;
+    for (let i=0; i <array.length; i++){
+        let flag = true;
+        if (array[i] <2 ){
+            flag = false
+        }
+        else{
+            for (let j = 2; j <= Math.sqrt(array[i]); j++){
+                if (array[i] % j === 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag === true){
+
+            sum += array[i];
+
+            document.getElementById('Tong').innerText = 'Tổng giá trị của các số nguyên tố trong mảng là ' + sum;
+
+        }
+
+
+    }
+</script>
+</html>

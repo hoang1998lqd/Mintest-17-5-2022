@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<p id="kq"></p>
+</body>
+<script>
+    let sum = 0;
+    for (let i=0; i <500; i++){
+        let flag = true;
+        if (i <2 ){
+            flag = false
+        }
+        else{
+            for (let j = 2; j <= Math.sqrt(i); j++){
+                if (i % j === 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag === true){
+            // console.log(i)
+            sum += i;
+
+            document.getElementById('kq').innerText = 'Tổng giá trị của các số nguyên tố trong mảng là ' + sum;
+
+        }
+
+
+    }
+
+</script>
+</html>

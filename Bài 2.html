@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<p id="kq"></p>
+</body>
+<script>
+    let array = [4,12,46,45,12,10,47,11,10,34,12,45,10,79,45,35,12,10,94,45,124];
+    let number = +prompt(' Nhập vào đây');
+    let count = 0
+    for (let i=0; i< array.length; i++){
+        if (array[i] === number){
+            count++
+        }
+
+    }
+    // console.log(count)
+document.getElementById('kq').innerHTML = 'Giá trị cần kiểm tra là: ' + number +
+    '<br> Số phần tử trùng lặp là : ' + count
+</script>
+</html>
